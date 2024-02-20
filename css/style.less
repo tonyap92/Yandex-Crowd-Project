@@ -1,0 +1,651 @@
+:root {
+  --color-black: rgb(31, 31, 31);
+  --color-gray: rgb(214, 214, 214);
+  --color-gray-dark: rgb(49, 49, 49);
+  --color-gray-light: rgb(208, 208, 208);
+
+  --color-peach: rgb(233, 222, 212);
+  --color-white: rgb(255, 255, 255);
+  --color-yellow: rgb(251, 206, 81);
+  --color-red: rgb(245, 73, 50);
+  --color-blue: rgb(48, 87, 162);
+}
+
+// MAIN
+html *,
+html ::after,
+html ::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: var(--color-gray-dark);
+}
+
+img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+.ct-wrapper {
+  max-width: 1920px;
+  min-width: 320px;
+
+  font-family: "Golos Text", sans-serif;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ct-header__title,
+.ct-main__info,
+.ct-about__text,
+.ct-steps__title,
+.ct-participants__title {
+  font-family: "Merriweather", serif;
+}
+
+.ct-header__inner,
+.ct-header__item:nth-child(2),
+.ct-main__marquee,
+.ct-steps,
+.ct-steps__step:nth-of-type(7),
+.ct-participants,
+.ct-participants__wrap {
+  position: relative;
+}
+
+.ct-header__bg,
+.ct-header__chess,
+.ct-steps__plane,
+.ct-participants__pagination {
+  position: absolute;
+}
+
+.ct-wrapper,
+.ct-header__content,
+.ct-header__title,
+.ct-header__text,
+.ct-header__btns,
+.ct-header__btn,
+.ct-main__marquee,
+.ct-participants__carousel,
+.span--center,
+.span--right {
+  width: 100%;
+}
+
+.ct-wrapper,
+.ct-header__content,
+.ct-main__inner,
+.ct-footer__inner,
+.ct-participants__carousel,
+.ct-participants__btn {
+  margin: 0 auto;
+}
+
+.players--mob,
+.ct-steps__pagination {
+  display: none;
+}
+
+.ct-steps__title,
+.text--top {
+  display: inline;
+}
+
+.span--center,
+.span--right,
+.ct-steps__span,
+.ct-steps__text {
+  display: inline-block;
+}
+
+.ct-header__content,
+.ct-header__btns,
+.ct-about__coll,
+.ct-about__var,
+.ct-steps__coll {
+  display: grid;
+}
+
+.ct-header__btn,
+.ct-main__marquee,
+.ct-steps__step,
+.ct-steps__step:before,
+.ct-participants__pagination,
+.ct-participants__cards,
+.ct-participants__btn {
+  display: flex;
+}
+
+.ct-header__btn,
+.ct-main__marquee,
+.ct-about__coll,
+.ct-steps__step:before,
+.ct-participants__pagination,
+.ct-participants__btn {
+  align-items: center;
+}
+
+.ct-header__btn,
+.ct-steps__step:before,
+.ct-participants__btn {
+  justify-content: center;
+}
+
+.ct-header__title,
+.ct-header__text,
+.r-about__row,
+.ct-steps__title,
+.ct-steps__step,
+.ct-steps__step:before,
+.ct-participants__status,
+.ct-participants__step,
+.ct-participants__slash,
+.ct-participants__total,
+.ct-footer__text,
+.ct-participants__title,
+.ct-participants__name {
+  color: var(--color-gray-dark);
+}
+
+.ct-header__btn,
+.ct-participants__step,
+.ct-participants__slash,
+.ct-participants__total,
+.ct-participants__btn,
+.ct-footer__text {
+  font-size: 16px;
+}
+
+.ct-about__note,
+.r-about__row,
+.ct-steps__text,
+.ct-steps__step,
+.ct-steps__step:before,
+.ct-participants__status {
+  font-size: 20px;
+}
+
+.ct-steps__title,
+.ct-participants__title {
+  font-size: 54px;
+}
+
+.ct-header__title,
+.ct-header__text,
+.ct-about__note,
+.r-about__row,
+.r-about__row:nth-child(odd),
+.ct-about__text,
+.ct-main__info,
+.ct-steps__title,
+.ct-steps__text,
+.ct-participants__title,
+.ct-participants__status,
+.ct-participants__step,
+.ct-participants__slash,
+.ct-participants__total,
+.ct-footer__text {
+  font-weight: 400;
+}
+
+.ct-steps__step,
+.ct-participants__btn {
+  font-weight: 500;
+}
+
+.r-about__row:nth-child(even),
+.ct-steps__step:before,
+.ct-participants__name {
+  font-weight: 600;
+}
+
+.ct-header__btn,
+.ct-about__note,
+.r-about__row,
+.ct-steps__step,
+.ct-steps__step:before,
+.ct-steps__title,
+.ct-steps__text,
+.ct-participants__title,
+.ct-participants__status,
+.ct-participants__step,
+.ct-participants__slash,
+.ct-participants__total,
+.ct-participants__name,
+.ct-participants__btn,
+.ct-footer__text {
+  line-height: 120%;
+}
+
+.ct-header__text,
+.ct-header__btn {
+  line-height: 130%;
+}
+
+.ct-header__text,
+.span--center,
+.ct-header__btn,
+.ct-participants__card {
+  text-align: center;
+}
+
+.ct-header__title,
+.ct-about__text,
+.ct-about__note,
+.r-about__row,
+.ct-steps__title,
+.ct-steps__text,
+.ct-steps__step,
+.ct-steps__step:before,
+.ct-participants__title,
+.ct-participants__step,
+.ct-participants__slash,
+.ct-participants__total,
+.ct-footer__text {
+  text-align: left;
+}
+
+.span--right,
+.ct-main__info {
+  text-align: right;
+}
+
+.ct-header__title,
+.ct-main__info,
+.ct-about__text,
+.ct-steps__title,
+.ct-participants__title {
+  text-transform: uppercase;
+}
+
+.ct-header__btn,
+.ct-participants__prev,
+.ct-participants__next {
+  cursor: pointer;
+}
+
+// HEADER
+
+.ct-header__inner {
+  height: 700px;
+}
+
+.ct-header__bg {
+  inset: 0;
+  background: url(../img/pict-1.png) 50% 100% no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.ct-header__content {
+  height: -webkit-fill-available;
+  max-width: 1286px;
+  padding: 25px 20px;
+  grid-template-columns: 63% 37%;
+}
+
+.ct-header__logo {
+  margin-bottom: 59px;
+}
+
+.ct-header__title,
+.ct-header__text,
+.ct-header__btns {
+  max-width: 542px;
+}
+
+.ct-header__title {
+  margin-bottom: 24px;
+  font-size: 60px;
+  line-height: 109%;
+}
+
+.ct-header__text {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.ct-header__btns {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px;
+}
+
+.ct-header__btn {
+  height: 72px;
+  max-width: 263px;
+  border-radius: 66px;
+  transition: background-color 0.4s ease-in, color 0.4s ease-in;
+}
+
+.btn--black {
+  color: var(--color-white);
+  background: var(--color-black);
+  &:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+  }
+}
+
+.btn--white {
+  color: var(--color-black);
+  background: transparent;
+  border: 2px solid var(--color-black);
+  &:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+}
+
+.chess--horse {
+  bottom: -11%;
+  left: -4%;
+}
+
+.chess--pawn {
+  bottom: 0;
+  right: 0;
+}
+
+// MAIN
+.ct-main {
+  background-color: var(--color-white);
+}
+
+.ct-main__marquee {
+  height: 60px;
+  overflow: hidden;
+
+  background-color: var(--color-red);
+}
+
+.ct-main__info {
+  color: var(--color-white);
+  font-size: 22px;
+  line-height: 110%;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ct-main__inner,
+.ct-footer__inner {
+  max-width: 1222px;
+}
+
+// ABOUT
+.ct-about {
+  padding: 77px 0 99px;
+}
+
+.ct-about__coll {
+  &:nth-of-type(1) {
+    margin-bottom: 20px;
+    grid-template-columns: 63% 32%;
+    column-gap: 64px;
+  }
+
+  &:nth-of-type(2) {
+    grid-template-columns: 42% 58%;
+  }
+}
+
+.ct-about__text {
+  font-size: 36px;
+  line-height: 135%;
+}
+
+.text--top {
+  max-width: 763px;
+}
+
+.span--red {
+  color: var(--color-red);
+}
+
+.text--bottom {
+  max-width: 681px;
+  margin-bottom: 46px;
+}
+
+.ct-about__player {
+  transform: translate(-25px, 15px);
+}
+
+.ct-about__note {
+  color: var(--color-blue);
+}
+
+.ct-about__table {
+  max-width: 704px;
+  margin: 0 auto 31px 0;
+  // grid-template-columns: 44% 56%;
+}
+
+.ct-about__var {
+  grid-template-columns: 44% 56%;
+  border-bottom: 2px solid var(--color-gray-light);
+  &:nth-last-of-type(1) {
+    border-bottom: none;
+  }
+}
+
+.item--padding {
+  padding-top: 45px;
+}
+
+.r-about__row {
+  padding: 15px 0;
+
+  &:nth-child(even) {
+    padding-left: 14px;
+  }
+
+  &:nth-child(odd) {
+    border-right: 2px solid var(--color-gray-light);
+  }
+}
+
+.span--line {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+// STEPS
+
+.ct-steps {
+  padding: 99px 0;
+}
+
+.ct-steps__wrap {
+  max-width: 704px;
+  margin-bottom: 54px;
+}
+
+.ct-steps__text {
+  max-width: 246px;
+  color: var(--color-blue);
+}
+
+.ct-steps__coll {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 20px;
+  counter-reset: num;
+}
+
+.ct-steps__step {
+  padding: 20px 21px;
+  align-items: flex-start;
+  background: url(../img/pict-12.png) 0% 0% repeat;
+
+  &:nth-of-type(3) {
+    grid-column: 3/3;
+    grid-row: 1/3;
+  }
+
+  &:nth-of-type(7) {
+    grid-column: 2/4;
+    grid-row: 3/3;
+  }
+
+  &:before {
+    height: 36px;
+    min-width: 36px;
+
+    margin-right: 16px;
+
+    background-color: var(--color-white);
+    border-radius: 60px;
+
+    content: counter(num);
+    counter-increment: num;
+  }
+}
+
+.span--widht {
+  max-width: 446px;
+}
+
+.ct-steps__plane {
+  bottom: 5%;
+  right: -4%;
+}
+
+// PARTICIPANTS
+.ct-participants {
+  padding: 101px 0 136px;
+}
+
+.ct-participants__title {
+  margin-bottom: 62px;
+}
+
+.ct-participants__pagination {
+  right: 0;
+  top: 10px;
+  width: 151px;
+
+  justify-content: space-between;
+}
+
+.ct-participants__prev,
+.ct-participants__next {
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--color-gray-dark);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  transition: background-color 0.2s ease-in;
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-yellow);
+  }
+
+  &:disabled {
+    color: var(--color-white);
+    background-color: var(--color-gray);
+  }
+}
+
+.ct-participants__prev {
+  margin-right: auto;
+  background-image: url(../img/pict-9.svg);
+}
+
+.ct-participants__next {
+  margin-left: auto;
+  background-image: url(../img/pict-10.svg);
+}
+
+.ct-participants__slash,
+.ct-participants__total {
+  opacity: 0.6;
+}
+
+.ct-participants__carousel {
+  max-width: 1147px;
+
+  overflow: hidden;
+}
+
+.ct-participants__cards {
+  transition: transform 0.3s ease-in-out;
+}
+
+.ct-participants__card {
+  flex: 0 0 333px;
+
+  margin-right: 76px;
+}
+
+.ct-participants__face {
+  margin-bottom: 24px;
+}
+
+.ct-participants__name {
+  margin-bottom: 6px;
+
+  font-size: 24px;
+}
+
+.ct-participants__status {
+  margin-bottom: 20px;
+
+  opacity: 0.6;
+}
+
+.ct-participants__btn {
+  width: 113px;
+  height: 35px;
+
+  color: var(--color-blue);
+
+  border: 1px solid var(--color-blue);
+  border-radius: 62px;
+  &:hover {
+    color: var(--color-white);
+    background: var(--color-blue);
+  }
+}
+
+// FOOTER
+.ct-footer {
+  background-color: var(--color-peach);
+}
+
+.ct-footer__text {
+  padding: 40px 0 72px;
+}
