@@ -21,14 +21,6 @@ const nextButtonSteps = document.querySelector(".ct-steps__next");
 const indicatorsSteps = document.querySelectorAll(".ct-steps__indicator");
 let currentSlideSteps = 0;
 
-// Код для второй карусели
-const carouselCardsParticipants = document.querySelector(".ct-participants__cards");
-const cardsParticipants = Array.from(document.querySelectorAll(".ct-participants__card"));
-const prevButtonParticipants = document.querySelector(".ct-participants__prev");
-const nextButtonParticipants = document.querySelector(".ct-participants__next");
-const stepElementParticipants = document.querySelector(".ct-participants__step");
-const totalParticipants = document.querySelector(".ct-participants__total");
-let currentSlideParticipants = 0;
 
 // Общая функция для обновления каруселей
 const updateSlider = () => {
@@ -40,13 +32,6 @@ const updateSlider = () => {
     indicator.classList.toggle("active", index === currentSlideSteps);
   });
 
-  // Обновление второй карусели
-  carouselCardsParticipants.style.transform = `translateX(-${
-    currentSlideParticipants * cardsParticipants[0].offsetWidth
-  }px)`;
-  const currentStepParticipants = currentSlideParticipants + 1;
-  stepElementParticipants.textContent = currentStepParticipants;
-};
 
 // Обработчики событий для первой карусели
 prevButtonSteps.addEventListener("click", () => {
@@ -70,33 +55,5 @@ indicatorsSteps.forEach((indicator, index) => {
   });
 });
 
-// Обработчики событий для второй карусели
-prevButtonParticipants.addEventListener("click", () => {
-  moveSlidesParticipants("prev");
-});
-
-nextButtonParticipants.addEventListener("click", () => {
-  moveSlidesParticipants("next");
-});
-
-setInterval(() => {
-  moveSlidesParticipants("next");
-}, 4000);
-
-// Функция для перемещения слайдов во второй карусели
-const moveSlidesParticipants = (direction) => {
-  if (direction === "prev") {
-    currentSlideParticipants--;
-    if (currentSlideParticipants < 0) {
-      currentSlideParticipants = 0;
-    }
-  } else if (direction === "next") {
-    currentSlideParticipants++;
-    if (currentSlideParticipants > cardsParticipants.length - 1) {
-      currentSlideParticipants = cardsParticipants.length - 1;
-    }
-  }
-  updateSlider();
-};
 
 updateSlider();
